@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Damar Adi Saputra | Portfolio</title>
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; transition: background 0.3s, color 0.3s; }
+    .glass { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3); }
+    .timeline { border-left: 2px solid #0ea5e9; }
+    .timeline-item { position: relative; margin-left: 20px; padding-left: 20px; margin-bottom: 20px; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -11px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: #0ea5e9;
+      border-radius: 50%;
+    }
+    /* Dark mode */
+    body.dark { background: #121212; color: #eee; }
+    body.dark .glass { background: rgba(30,30,30,0.7); border: 1px solid rgba(255,255,255,0.1); }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white text-gray-800 dark:from-gray-900 dark:to-black dark:text-gray-200">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full flex justify-between px-8 py-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow z-50">
+    <h1 class="text-xl font-bold text-blue-600 dark:text-blue-400">Damar Portfolio</h1>
+    <div class="space-x-4">
+      <button id="toggleDark" class="px-3 py-1 rounded bg-blue-500 text-white hover:bg-blue-600">🌙</button>
+      <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" class="px-3 py-1 rounded bg-blue-600 text-white hover:bg-blue-700">LinkedIn</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-white to-blue-100 dark:from-gray-800 dark:to-gray-900">
+    <img src="https://via.placeholder.com/200" alt="Profile" class="w-40 h-40 rounded-full shadow-lg mb-6 border-4 border-blue-500" data-aos="zoom-in">
+    <h1 class="text-4xl md:text-5xl font-bold mb-2" data-aos="fade-up">Damar Adi Saputra</h1>
+    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6" data-aos="fade-up" data-aos-delay="200">
+      Finance & Investment Enthusiast | Business Analyst
+    </p>
+    <div class="flex space-x-4" data-aos="fade-up" data-aos-delay="400">
+      <a href="#" class="px-6 py-2 bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-lg shadow hover:scale-105 transition">Download CV</a>
+      <a href="#contact" class="px-6 py-2 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="py-20 px-6 md:px-20">
+    <div class="glass max-w-4xl mx-auto p-8 rounded-xl shadow-lg" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-center text-blue-600 dark:text-blue-400 mb-6">About Me</h2>
+      <p class="text-lg text-center">
+        Saya adalah seorang mahasiswa dan praktisi dengan minat besar pada keuangan, investasi, dan riset bisnis.
+        Berpengalaman dalam analisis fundamental, studi kelayakan, serta pembuatan dashboard keuangan digital.
+        Nilai utama saya adalah profesionalisme, integritas, dan semangat belajar.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 px-6 md:px-20 bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-black">
+    <h2 class="text-3xl font-bold text-center text-blue-600 dark:text-blue-400 mb-12" data-aos="fade-up">Skills</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="glass p-6 rounded-xl" data-aos="fade-right">
+        <h3 class="text-xl font-semibold mb-4">Finance & Analysis</h3>
+        <ul class="space-y-2">
+          <li>📊 Financial Modeling</li>
+          <li>📈 Equity Valuation</li>
+          <li>🔎 Market Research</li>
+        </ul>
+      </div>
+      <div class="glass p-6 rounded-xl" data-aos="fade-up">
+        <h3 class="text-xl font-semibold mb-4">Business & Research</h3>
+        <ul class="space-y-2">
+          <li>📚 Business Feasibility Study</li>
+          <li>📝 Report Writing</li>
+          <li>🎤 Public Speaking</li>
+        </ul>
+      </div>
+      <div class="glass p-6 rounded-xl" data-aos="fade-left">
+        <h3 class="text-xl font-semibold mb-4">Digital Tools</h3>
+        <ul class="space-y-2">
+          <li>🧮 Excel & Google Sheets</li>
+          <li>🐍 Python (Basic)</li>
+          <li>🎨 Canva & Dashboard</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="py-20 px-6 md:px-20">
+    <h2 class="text-3xl font-bold text-center text-blue-600 dark:text-blue-400 mb-12" data-aos="fade-up">Portfolio</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="glass p-4 rounded-xl hover:scale-105 transition" data-aos="zoom-in">
+        <img src="https://via.placeholder.com/300x200" class="rounded mb-4">
+        <h3 class="font-semibold">Studi Kelayakan RS Siloam Sorong</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Analisis kelayakan investasi pembangunan rumah sakit di Papua Barat Daya.</p>
+        <a href="#" class="text-blue-500 hover:underline">View More</a>
+      </div>
+      <div class="glass p-4 rounded-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
+        <img src="https://via.placeholder.com/300x200" class="rounded mb-4">
+        <h3 class="font-semibold">Analisis Saham MBSS</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Valuasi saham sektor pelayaran berbasis fundamental & teknikal.</p>
+        <a href="#" class="text-blue-500 hover:underline">View More</a>
+      </div>
+      <div class="glass p-4 rounded-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="400">
+        <img src="https://via.placeholder.com/300x200" class="rounded mb-4">
+        <h3 class="font-semibold">Dashboard Keuangan Pribadi</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Membangun dashboard keuangan interaktif dengan Google Sheets & API.</p>
+        <a href="#" class="text-blue-500 hover:underline">View More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education -->
+  <section id="experience" class="py-20 px-6 md:px-20 bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-black">
+    <h2 class="text-3xl font-bold text-center text-blue-600 dark:text-blue-400 mb-12" data-aos="fade-up">Experience & Education</h2>
+    <div class="timeline max-w-3xl mx-auto">
+      <div class="timeline-item" data-aos="fade-up">
+        <h3 class="font-semibold">Magang - Equity Research Assistant</h3>
+        <span class="text-sm text-gray-600 dark:text-gray-400">2024</span>
+        <p>Menganalisis laporan keuangan dan membuat rekomendasi saham.</p>
+      </div>
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="font-semibold">Organisasi - Ketua Divisi Investasi</h3>
+        <span class="text-sm text-gray-600 dark:text-gray-400">2023</span>
+        <p>Mengkoordinasikan kegiatan analisis saham dan pelatihan pasar modal.</p>
+      </div>
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+        <h3 class="font-semibold">Universitas XYZ - S1 Manajemen Keuangan</h3>
+        <span class="text-sm text-gray-600 dark:text-gray-400">2022–Sekarang</span>
+        <p>Fokus pada keuangan korporasi, investasi, dan analisis bisnis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 md:px-20">
+    <h2 class="text-3xl font-bold text-center text-blue-600 dark:text-blue-400 mb-12" data-aos="fade-up">Contact Me</h2>
+    <form class="glass max-w-xl mx-auto p-6 rounded-xl space-y-4" data-aos="fade-up">
+      <input type="text" placeholder="Your Name" class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <input type="email" placeholder="Your Email" class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <textarea placeholder="Your Message" rows="4" class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+      <button class="w-full bg-gradient-to-r from-blue-500 to-cyan-400 text-white py-2 rounded-lg hover:scale-105 transition">Send Message</button>
+    </form>
+    <div class="flex justify-center space-x-6 mt-8 text-3xl">
+        
+      <a href="https://www.linkedin.com/in/damar-saputra-948164297" target="_blank" class="hover:text-blue-600"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="40" height="40">
+  <path fill="#0A66C2" d="M100.28 448H7.4V148.9h92.88zm-46.44-338C24.2 110 0 85.8 0 56.1 0 26.3 24.2 2 53.8 2c29.8 0 53.9 24.3 53.9 54.1 0 29.7-24.1 53.9-53.9 53.9zM447.9 448h-92.4V302.4c0-34.7-.7-79.3-48.3-79.3-48.3 0-55.7 37.7-55.7 76.6V448h-92.4V148.9h88.6v40.8h1.3c12.4-23.6 42.6-48.3 87.7-48.3 93.8 0 111.1 61.8 111.1 142.3V448z"/>
+</svg>
+</a>
+
+      <a href="mailto:saputradamar887@gmail.com" class="hover:text-red-500"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40">
+  <path fill="#f2f2f2" d="M464 64H48C21.5 64 0 85.5 0 112v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48z"/>
+  <path fill="#ea4335" d="M464 64H48C21.5 64 0 85.5 0 112v288c0 26.5 21.5 48 48 48h30V192L256 320l178-128v256h30c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48z"/>
+  <path fill="#34a853" d="M0 112v288c0 26.5 21.5 48 48 48h30V192L0 112z"/>
+  <path fill="#fbbc04" d="M464 448c26.5 0 48-21.5 48-48V112l-178 128 130 208z"/>
+  <path fill="#4285f4" d="M48 64h416c26.5 0 48 21.5 48 48L256 288 0 112c0-26.5 21.5-48 48-48z"/>
+</svg>
+</a>
+
+      <a href="https://www.instagram.com/damar_adi_pasaribu?igsh=eW4xdGlhMXEzZzhj" target="_blank" class="hover:text-pink-500"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40">
+  <defs>
+    <radialGradient id="igGradient" cx="30%" cy="107%" r="150%">
+      <stop offset="0%" stop-color="#fdf497"/>
+      <stop offset="5%" stop-color="#fdf497"/>
+      <stop offset="45%" stop-color="#fd5949"/>
+      <stop offset="60%" stop-color="#d6249f"/>
+      <stop offset="90%" stop-color="#285AEB"/>
+    </radialGradient>
+  </defs>
+  <path fill="url(#igGradient)" d="M349.33 69.33h-186.7c-51.2 0-93.3 42.1-93.3 93.3v186.7c0 51.2 42.1 93.3 93.3 93.3h186.7c51.2 0 93.3-42.1 93.3-93.3v-186.7c0-51.2-42.1-93.3-93.3-93.3zM464 349.33c0 63.47-51.53 115-115 115h-186.67c-63.47 0-115-51.53-115-115v-186.67c0-63.47 51.53-115 115-115h186.67c63.47 0 115 51.53 115 115v186.67z"/>
+  <path fill="white" d="M256 164c-50.65 0-92 41.35-92 92s41.35 92 92 92 92-41.35 92-92-41.35-92-92-92zm0 152c-33.14 0-60-26.86-60-60s26.86-60 60-60 60 26.86 60 60-26.86 60-60 60z"/>
+  <circle fill="white" cx="350.5" cy="161.5" r="21.5"/>
+</svg>
+</a>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-blue-600 text-white text-center dark:bg-gray-900">
+    © 2025 Damar Adi Saputra. All rights reserved.
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <!-- Dark Mode Script -->
+  <script>
+    document.getElementById("toggleDark").addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+</body>
+</html>
